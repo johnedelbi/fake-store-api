@@ -1,7 +1,8 @@
-import e from 'express';
+import { v4 as newId } from 'uuid';
 
 let user = [
     {
+        id: '1',
         email: 'john@john.com',
         password: '123456'
     }
@@ -9,6 +10,7 @@ let user = [
 
 class User {
     constructor(email, password) {
+        this.id = newId();
         this.email = email;
         this.password = password;
     }
@@ -18,9 +20,8 @@ class User {
     };
 
     static getUserByEmail = (email) => {
-        return user.find((user)=> user.email === email);
+        return user.find((user) => user.email === email);
     };
-
 }
 
 export default User;

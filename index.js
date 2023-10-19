@@ -45,7 +45,9 @@ app.use('/user', userRoutes);
 app.use('*', (req, res) => {
     res.status(404).render('message', {
         title: '404',
-        message: 'page not found'
+        message: 'page not found',
+        href: './user',
+        linkText: 'back to home'
     });
 });
 
