@@ -15,6 +15,7 @@ const PATH = dirname(__fileName);
 dotenv.config();
 
 const PORT = process.env.PORT || 3005;
+console.log(PORT);
 
 //init express
 const app = express();
@@ -39,7 +40,6 @@ app.use(
 
 //use routes
 app.use('/user', userRoutes);
-
 
 //handel 404
 app.use('*', (req, res) => {
