@@ -63,6 +63,8 @@ const userController = {
                 linkText: 'Try Again'
             });
         } else if (validEmail && validPassword) {
+            const newUser = new User(email, password);
+            newUser.addUser();
             res.status(200).render('message', {
                 title: 'signup successfully ',
                 message: 'user has been registered',
