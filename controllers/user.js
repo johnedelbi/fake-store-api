@@ -5,7 +5,6 @@ import User from '../models/user.js';
 const userController = {
     getForm: (req, res) => {
         const emailSession = req.session.email;
-        console.log(emailSession);
         if (emailSession) {
             res.status(200).render('message', {
                 title: '! you are already logged in ',
@@ -23,7 +22,6 @@ const userController = {
 
     loggedIn: (req, res) => {
         const { email } = req.body;
-        console.log(email);
         if (email) {
             req.session.email = 'email';
             res.cookie('email', email, { maxAge: 60 * 60 * 1000 });

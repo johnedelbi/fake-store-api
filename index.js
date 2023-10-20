@@ -15,7 +15,6 @@ const PATH = dirname(__fileName);
 dotenv.config();
 
 const PORT = process.env.PORT || 3005;
-console.log(PORT);
 
 //init express
 const app = express();
