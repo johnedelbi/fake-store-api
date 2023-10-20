@@ -37,6 +37,9 @@ app.use(
     })
 );
 
+// init static
+app.use(express.static(path.join(PATH, 'public')));
+
 //use routes
 app.use('/user', userRoutes);
 
