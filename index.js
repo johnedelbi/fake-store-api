@@ -8,6 +8,7 @@ import session from 'express-session';
 
 import storeRoutes from './routes/store.js';
 import userRoutes from './routes/user.js';
+import logger from './middleware/logger.js';
 
 //create the path
 const __fileName = fileURLToPath(import.meta.url);
@@ -40,6 +41,9 @@ app.use(
 
 // init static
 app.use(express.static(path.join(PATH, 'public')));
+
+//logger middleware 
+app.use(logger);
 
 //use routes
 app.use('/store', storeRoutes);
