@@ -6,6 +6,7 @@ import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
 import session from 'express-session';
 
+import storeRoutes from './routes/store.js';
 import userRoutes from './routes/user.js';
 
 //create the path
@@ -41,6 +42,7 @@ app.use(
 app.use(express.static(path.join(PATH, 'public')));
 
 //use routes
+app.use('/store', storeRoutes);
 app.use('/user', userRoutes);
 
 //handel 404

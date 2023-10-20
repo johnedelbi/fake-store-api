@@ -1,7 +1,7 @@
 nav {
-    position: absolute;
-    top: 0;
-    right: 10px;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
 }
 
 nav ul {
@@ -28,7 +28,7 @@ nav a :hover {
 .form-container {
     width: 300px;
     margin: 0 auto;
-    margin-top: 20%;
+    margin-top: 10%;
 }
 
 label {
